@@ -1,0 +1,37 @@
+<!--question 6 For these last two questions, you're going to create a website that displays a random string when you click a button. (You'll be using the function you just wrote above to generate that random string.) Use jQuery to do this.
+
+In this question, submit the html for this website. I recommend writing it in Sublime (or whatever your text editor of choice is), and then copying and pasting it here. Save that file - you'll need it later!
+
+Alternatively, create a new repo for your code and upload it to GitHub. Paste the repo link here.*/-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>random string generator</title>
+</head>
+<body>
+<button id="randomButton">click here to generate a random string></button>
+</body>
+</html>
+
+
+
+<!--/*Question 7 In this question, copy and paste in the contents of your JavaScript file for your random string generator site.
+
+
+
+
+Again, be sure to create this code in a sublime file that you save for later use.
+
+
+
+Alternatively, create a new repo for your code and upload it to GitHub. Paste the repo link here.-->
+
+<script>
+var randomArray = ['dog', 'cat', 'pig', 'hamster', 'human'];
+
+  var randomStringSelector = function (stringArray) {
+    return stringArray[Math.floor(Math.random() * stringArray.length)];
+  }
+
+  ("#randomButton").on("click", randomStringSelector(randomArray));
+</script>
